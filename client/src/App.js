@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Register from './components/Register';
+import Recipes from './components/Recipes';
 
 class App extends React.Component {
 
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Register />
+        <Recipes />
       </div>
     );
   }

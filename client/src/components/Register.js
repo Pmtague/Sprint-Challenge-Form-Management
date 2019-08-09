@@ -11,6 +11,7 @@ const Register = ({ errors, touched, status }) => {
 			setUsers([...users, status])
 		}
 	}, [status]);
+
 	return (
 		<div className='register-form'>
 			<h1>Come Aboard!</h1>
@@ -37,11 +38,6 @@ const Register = ({ errors, touched, status }) => {
 				<p className="error">Choose a password.</p>}
 				<button type="submit">Submit</button>
 			</Form>
-			<div className='register-list'>
-				{users.map(user => (
-					<p key={ user.id }>{ user.username }</p>
-				))}
-			</div>
 		</div>
 	)
 }
@@ -66,6 +62,7 @@ const FormikRegister = withFormik({
 			.post('http://localhost:5000/api/register', values)
 			.then(res => {
 				setStatus(res.data);
+				console.log(res.data)
 			})
 			.catch(err => console.log(err.response));
 	}
