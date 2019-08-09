@@ -8,5 +8,4 @@ describe('<Register />', () => {
 			render(<Register />)
 		})
 	});
-	it('')
 });
