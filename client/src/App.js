@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
+import Register from './components/Register';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Sign Up!</h1>
-    </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <div className="App">
+        <Register />
+      </div>
+    );
+  }
 }
 
 export default App;
